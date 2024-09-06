@@ -1,0 +1,10 @@
+Windows Instructions
+1. Open Windows PowerShell.
+2. Navigate to script location.
+3. Execute the following command.
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+4. Type Y
+5. Run the git-stats program.
+.\git-stats-authormap.ps1 -n 5 > git-stats-output.txt
+6. Run the calculate_contributions program. It expects git-stats-output.txt.
+python calculate_contributions.py
