@@ -1,1 +1,5 @@
 venv/*
+vols/*
+masks/*
+wd/*
+*.hf
