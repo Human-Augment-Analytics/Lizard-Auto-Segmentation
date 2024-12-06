@@ -3,3 +3,8 @@ vols/*
 masks/*
 wd/*
 *.hf
+*.png
+registration.ipynb
+registration_full.ipynb
+311venv/*
+saved_models/*

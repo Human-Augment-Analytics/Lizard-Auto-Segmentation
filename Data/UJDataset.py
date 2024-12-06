@@ -1,6 +1,8 @@
 from torch.utils.data import Dataset
 import numpy as np
 import torch
+import io
+from PIL import Image
 
 class UJDataset(Dataset):
     """Pytorch Dataset for preprocessed lizard scans with upper jaw and skull also segmented"""
@@ -15,6 +17,7 @@ class UJDataset(Dataset):
 
     def __getitem__(self, idx):
         image = np.array(self.dataset[idx]['image'], dtype=np.float32)
+        #image = np.array(Image.open(io.BytesIO(self.dataset[idx]['image']['bytes'])), dtype=np.float32)
         panoptic_seg_gt = np.array(self.dataset[idx]['label'], dtype=np.float32)
 
         if self.transform is not None:
